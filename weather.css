@@ -1,0 +1,159 @@
+/* Reset some default browser styles */
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family:system-ui;
+    background-color: #132c91bd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  
+  .card {
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+box-shadow: 0 8px 32px 0 rgba(107, 115, 228, 0.655);
+backdrop-filter: blur( 6px );
+-webkit-backdrop-filter: blur( 6px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+background-color: #1212671c;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .serach {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    /*padding: 8px;*/
+    border: 2px solid ;
+    border-radius: 15px;    
+    font-size: 1.2em;
+    outline:none;
+    color: rgba(0, 0, 0, 0.848);
+    font-weight: 600;
+  }
+  input::placeholder{
+    color:rgba(0, 0, 0, 0.888);
+    font-weight: 600;
+  }
+  
+  .button {
+    height:auto;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    border: 7px;
+    color: white;
+    background-color: #1877f2;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  
+  .button:hover {
+    background-image: linear-gradient(90deg,
+      #B799FF 0%,
+      #ACBCFF 50%,
+      #AEE2FF 75%,
+      #E6FFFD 100%);
+    color: black;
+    animation: slide 10s linear infinite;
+  }
+  
+  @keyframes slide {
+    100% {
+      background-position: 50rem;
+    }
+  }
+  
+  .result {
+    display: none;
+    transition: all 0.2s;
+  }
+  .result .show{
+    display:block;
+    transition: all 0.2s;
+  }
+  
+  
+  .here{
+    max-width: 100%;
+    height:100px;
+
+  }
+  
+  
+  .temp {
+    font-size: 2em;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  
+  .city {
+    font-size: 1.5em;
+    color: #0a0000;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  
+  .option {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .humidity1, .wind1 {
+    display:flex;
+    padding-top: 10px;
+    margin-right: 10px;
+    flex: 1;
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+  }
+  .option div{
+    flex:auto;
+  }
+  
+  .img img {
+   
+    max-width: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .humidity, .wind {
+    font-size: 1.2em;
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 600px) {
+    .serach {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
